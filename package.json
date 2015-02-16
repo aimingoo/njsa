@@ -1,0 +1,14 @@
+{
+	"name": "njsa",
+	"description": "AStore In NodeJS. The astore is Avro Data Store based on Akka.",
+	"author": "aimingoo",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/aimingoo/njsa.git"
+	},
+	"dependencies": {
+		"require": "request/request"
+	},
+	"main": "njsa.js",
+	"version": "1.0.0"
+}
