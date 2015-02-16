@@ -1,4 +1,4 @@
-njsa
+njsa [![npm version](https://badge.fury.io/js/njsa.svg)](https://github.com/aimingoo/njsa)
 =========
 
 AStore In NodeJS. The astore is Avro Data Store based on Akka.
@@ -230,6 +230,7 @@ centre(model, 'putscript', fieldName, 'script_3', {
 
 #### expanded script environment
 1) global variant &lt;record&gt; is standard js object
+
 in astore native environment, the &lt;record&gt; is warped java object. so you cant direct access any field/properties, only do these:
 ```javascript
 // in astore native environment
@@ -245,6 +246,7 @@ value_2 = record.field_b
 ...
 ```
 2) global variant &lt;fields&gt; is standard js object too
+
 in astore native environment, the &lt;fields&gt; is array of OnUpdate changeset. so you must enumerate fields to get a field/fieldValue by name. ex:
 ```javascript
 // in astore native environment
@@ -265,6 +267,7 @@ print('field_b: ', fields.field_b || 'NO FOUND')
 ...
 ```
 3) global variant &lt;fieldName&gt; will set to current changed field name
+
 in astore native environment, you cant know who changing. so you must put field names into script content in advance. but in NJSA, the &lt;fieldName&gt; is global variant. ex:
 ```javascript
 // in NJSA
@@ -272,8 +275,8 @@ centre(model, 'putscript', 'field_b', 'script_2', function(){
   print(fieldName, 'oldValue: '+fields[fieldName], 'newValue: '+record[fieldName])
 })
 ```
-
 4) configurable script content
+
 in NJSA, a function or code snippet can invoke any fields, and support configurable arguments. ex:
 ```javascript
 // in NJSA
