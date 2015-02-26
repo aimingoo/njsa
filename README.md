@@ -304,7 +304,7 @@ var script_2 = {
   run: showUpdating
 }
 
-centre(model, 'putscript', 'field_a', 'script_2', script_1)
+centre(model, 'putscript', 'field_a', 'script_1', script_1)
 centre(model, 'putscript', 'field_b', 'script_2', script_2)
 ```
 
